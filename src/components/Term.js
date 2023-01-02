@@ -8,7 +8,7 @@ export default function Term() {
     const cmds = commands.commands
     const owrs = commands.overwrites
     const terminal = React.createRef()
-    const [prompt, setPrompt] = React.useState('you@/ashterm:~$ ')
+    const [prompt, setPrompt] = React.useState('lucifer@arch:~$ ')
     const [home, sethome] = React.useState('ashterm')
     const [dir, setdir] = React.useState({
         'ashterm': []
@@ -17,13 +17,14 @@ export default function Term() {
         <Terminal
             ref={terminal}
             welcomeMessage={[
-                "Welcome to ashterm!",
+"░▒█▀▀▀█░█░▒█░█▀▄▀█░░▀░░▀█▀░░░▒█▀▀▄░▒█░▒█░░▀░░█▀▄▀█░█▀▀▄░█▀▀▄",
+"░░▀▀▀▄▄░█░▒█░█░▀░█░░█▀░░█░░░░▒█░▒█░▒█▀▀█░░█▀░█░▀░█░█▄▄█░█░▒█",
+"░▒█▄▄▄█░░▀▀▀░▀░░▒▀░▀▀▀░░▀░░░░▒█▄▄█░▒█░▒█░▀▀▀░▀░░▒▀░▀░░▀░▀░░▀",
+                                                                                                                          
                 "---",
                 "This is a terminal style website made with React.",
                 "---",
                 "Type 'help' to see a list of commands.",
-                "---",
-                "try starting with 'cat' (〜￣▽￣)〜",
                 "---",
             ]}
             commands={{
@@ -34,21 +35,12 @@ export default function Term() {
                         terminal.current.clearStdout()
                     }
                 },
-                cat: {
-                    description: 'Get a random cute cat~',
-                    usage: 'cat',
-                    fn: async () => {
-                        const url = await getcat()
-                        terminal.current.pushToStdout("getting a cute cat for you..\n---\n")
-                        terminal.current.pushToStdout(<img src={url} width="500px" height="380px" alt='cat'></img>)
-                    }
-                },
-                cd: {
+                           cd: {
                     description: 'Change directory, not really, lol!',
                     usage: 'cd <directory>',
                     fn: (...args) => {
                         if (args.length===1 && args[0]==='..') {
-                            if (prompt === 'you@/ashterm:~$ ') {
+                            if (prompt === 'lucifer@arch:~$ ') {
                                 return 'cannot go up'
                             } else {
                                 setPrompt(prompt.substring(0, prompt.lastIndexOf('/'))+":~$ ")
