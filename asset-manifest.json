@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/my-term-portofolio/static/css/main.cc6ee975.css",
+    "main.js": "/my-term-portofolio/static/js/main.138a91cb.js",
+    "static/media/base.png": "/my-term-portofolio/static/media/base.9dd39229c2f69940f63a.png",
+    "index.html": "/my-term-portofolio/index.html",
+    "main.cc6ee975.css.map": "/my-term-portofolio/static/css/main.cc6ee975.css.map",
+    "main.138a91cb.js.map": "/my-term-portofolio/static/js/main.138a91cb.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cc6ee975.css",
+    "static/js/main.138a91cb.js"
+  ]
+}
